@@ -7,7 +7,7 @@ from ultralytics import YOLO
 import random
 
 # YOLO 模型路径
-MODEL_PATH = 'D:/大学/py/pythonProject2/ltzj/yolo/runs/detect/train4/weights/best.pt'
+MODEL_PATH = 'templates/best.pt'
 model = YOLO(MODEL_PATH)
 
 # 屏幕区域
