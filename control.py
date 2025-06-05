@@ -41,7 +41,7 @@ def drag_plane(cx, cy, offset=40):
     pyautogui.mouseDown()
     pyautogui.moveTo(target_x, screen_y, duration=0.2)
     pyautogui.mouseUp()
-    time.sleep(0.2)
+    time.sleep(2)
 # 主程序
 def main():
     print("3 秒后开始监控飞机与子弹...")
