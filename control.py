@@ -35,7 +35,7 @@ def drag_plane(cx, cy, offset=40):
     target_x = screen_x + direction * offset
 
     direction_str = "左" if direction == -1 else "右"
-    print(f"🚀 避开子弹，从 ({screen_x}, {screen_y}) 向{direction_str} 移动")
+    print(f"避开子弹，从 ({screen_x}, {screen_y}) 向{direction_str} 移动")
 
     pyautogui.moveTo(screen_x, screen_y)
     pyautogui.mouseDown()
@@ -76,15 +76,15 @@ def main():
                 # 判断 bullet 横坐标是否在 jet 范围内（允许 ±10 容差）
                 if jx1 - 10 <= bullet_cx <= jx2 + 10:
                     danger = True
-                    print("⚠️ 检测到子弹可能命中，开始移动躲避")
+                    print("检测到子弹可能命中，开始移动躲避")
                     break
 
             if danger:
                 drag_plane(jet_cx, jet_cy)
             else:
-                print("✅ 安全，没有子弹命中风险")
+                print("安全，没有子弹命中风险")
         else:
-            print("❌ 未检测到飞机")
+            print("未检测到飞机")
 
         time.sleep(0.5)
 
